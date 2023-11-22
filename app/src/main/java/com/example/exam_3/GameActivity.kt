@@ -33,15 +33,17 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun initBoard() {
-        boardList.add(binding.a1)
-        boardList.add(binding.a2)
-        boardList.add(binding.a3)
-        boardList.add(binding.b1)
-        boardList.add(binding.b2)
-        boardList.add(binding.b3)
-        boardList.add(binding.c1)
-        boardList.add(binding.c2)
-        boardList.add(binding.c3)
+        with(boardList) {
+            add(binding.a1)
+            add(binding.a2)
+            add(binding.a3)
+            add(binding.b1)
+            add(binding.b2)
+            add(binding.b3)
+            add(binding.c1)
+            add(binding.c2)
+            add(binding.c3)
+        }
     }
 
     fun boardTapped(view: View) {

@@ -1,10 +1,10 @@
 package com.example.exam_3
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.example.exam_3.databinding.ActivityGameActivity5x5Binding
 
 class GameActivity5x5 : AppCompatActivity() {
@@ -32,36 +32,37 @@ class GameActivity5x5 : AppCompatActivity() {
     }
 
     private fun initBoard() {
-        boardList.add(binding.a1)
-        boardList.add(binding.a2)
-        boardList.add(binding.a3)
-        boardList.add(binding.a4)
-        boardList.add(binding.a5)
+        with(boardList) {
+            add(binding.a1)
+            add(binding.a2)
+            add(binding.a3)
+            add(binding.a4)
+            add(binding.a5)
 
-        boardList.add(binding.b1)
-        boardList.add(binding.b2)
-        boardList.add(binding.b3)
-        boardList.add(binding.b4)
-        boardList.add(binding.b5)
+            add(binding.b1)
+            add(binding.b2)
+            add(binding.b3)
+            add(binding.b4)
+            add(binding.b5)
 
-        boardList.add(binding.c1)
-        boardList.add(binding.c2)
-        boardList.add(binding.c3)
-        boardList.add(binding.c4)
-        boardList.add(binding.c5)
+            add(binding.c1)
+            add(binding.c2)
+            add(binding.c3)
+            add(binding.c4)
+            add(binding.c5)
 
-        boardList.add(binding.d1)
-        boardList.add(binding.d2)
-        boardList.add(binding.d3)
-        boardList.add(binding.d4)
-        boardList.add(binding.d5)
+            add(binding.d1)
+            add(binding.d2)
+            add(binding.d3)
+            add(binding.d4)
+            add(binding.d5)
 
-        boardList.add(binding.e1)
-        boardList.add(binding.e2)
-        boardList.add(binding.e3)
-        boardList.add(binding.e4)
-        boardList.add(binding.e5)
-
+            add(binding.e1)
+            add(binding.e2)
+            add(binding.e3)
+            add(binding.e4)
+            add(binding.e5)
+        }
 
     }
 
@@ -89,33 +90,81 @@ class GameActivity5x5 : AppCompatActivity() {
 
     private fun checkForVictory(s: String): Boolean {
         //Horizontal Victory
-        if (match(binding.a1, s) && match(binding.a2, s) && match(binding.a3, s)&& match(binding.a4, s)&& match(binding.a5, s))
+        if (match(binding.a1, s) && match(binding.a2, s) && match(
+                binding.a3,
+                s
+            ) && match(binding.a4, s) && match(binding.a5, s)
+        )
             return true
-        if (match(binding.b1, s) && match(binding.b2, s) && match(binding.b3, s)&& match(binding.b4, s)&& match(binding.b5, s))
+        if (match(binding.b1, s) && match(binding.b2, s) && match(
+                binding.b3,
+                s
+            ) && match(binding.b4, s) && match(binding.b5, s)
+        )
             return true
-        if (match(binding.c1, s) && match(binding.c2, s) && match(binding.c3, s)&& match(binding.c4, s)&& match(binding.c5, s))
+        if (match(binding.c1, s) && match(binding.c2, s) && match(
+                binding.c3,
+                s
+            ) && match(binding.c4, s) && match(binding.c5, s)
+        )
             return true
-        if (match(binding.d1, s) && match(binding.d2, s) && match(binding.d3, s)&& match(binding.d4, s) && match(binding.d5, s))
+        if (match(binding.d1, s) && match(binding.d2, s) && match(
+                binding.d3,
+                s
+            ) && match(binding.d4, s) && match(binding.d5, s)
+        )
             return true
-        if (match(binding.e1, s) && match(binding.e2, s) && match(binding.e3, s)&& match(binding.e4, s) && match(binding.e5, s))
+        if (match(binding.e1, s) && match(binding.e2, s) && match(
+                binding.e3,
+                s
+            ) && match(binding.e4, s) && match(binding.e5, s)
+        )
             return true
 
         //Vertical Victory
-        if (match(binding.a1, s) && match(binding.b1, s) && match(binding.c1, s)&& match(binding.d1, s)&& match(binding.e1, s))
+        if (match(binding.a1, s) && match(binding.b1, s) && match(
+                binding.c1,
+                s
+            ) && match(binding.d1, s) && match(binding.e1, s)
+        )
             return true
-        if (match(binding.a2, s) && match(binding.b2, s) && match(binding.c2, s)&& match(binding.d2, s)&& match(binding.e2, s))
+        if (match(binding.a2, s) && match(binding.b2, s) && match(
+                binding.c2,
+                s
+            ) && match(binding.d2, s) && match(binding.e2, s)
+        )
             return true
-        if (match(binding.a3, s) && match(binding.b3, s) && match(binding.c3, s)&& match(binding.d3, s)&& match(binding.e3, s))
+        if (match(binding.a3, s) && match(binding.b3, s) && match(
+                binding.c3,
+                s
+            ) && match(binding.d3, s) && match(binding.e3, s)
+        )
             return true
-        if (match(binding.a4, s) && match(binding.b4, s) && match(binding.c4, s)&& match(binding.d4, s)&& match(binding.e4, s))
+        if (match(binding.a4, s) && match(binding.b4, s) && match(
+                binding.c4,
+                s
+            ) && match(binding.d4, s) && match(binding.e4, s)
+        )
             return true
-        if (match(binding.a5, s) && match(binding.b5, s) && match(binding.c5, s)&& match(binding.d5, s)&& match(binding.e5, s))
+        if (match(binding.a5, s) && match(binding.b5, s) && match(
+                binding.c5,
+                s
+            ) && match(binding.d5, s) && match(binding.e5, s)
+        )
             return true
 
         //Diagonal Victory
-        if (match(binding.a1, s) && match(binding.b2, s) && match(binding.c3, s)&& match(binding.d4, s)&& match(binding.e5, s))
+        if (match(binding.a1, s) && match(binding.b2, s) && match(
+                binding.c3,
+                s
+            ) && match(binding.d4, s) && match(binding.e5, s)
+        )
             return true
-        if (match(binding.a5, s) && match(binding.b4, s) && match(binding.c3, s)&& match(binding.d2, s)&& match(binding.e1, s))
+        if (match(binding.a5, s) && match(binding.b4, s) && match(
+                binding.c3,
+                s
+            ) && match(binding.d2, s) && match(binding.e1, s)
+        )
             return true
 
         return false
@@ -129,7 +178,8 @@ class GameActivity5x5 : AppCompatActivity() {
             .setTitle(title)
             .setMessage(message)
             .setPositiveButton("Reset")
-            { _, _ -> resetBoard()
+            { _, _ ->
+                resetBoard()
 
             }
             .setCancelable(false)
@@ -137,11 +187,11 @@ class GameActivity5x5 : AppCompatActivity() {
     }
 
     private fun resetBoard() {
-        for(button in boardList) {
+        for (button in boardList) {
             button.text = ""
         }
 
-        if (firstTurn ==  Turn.NOUGHT)
+        if (firstTurn == Turn.NOUGHT)
             firstTurn = Turn.CROSS
         else if (firstTurn == Turn.CROSS)
             firstTurn = Turn.NOUGHT
@@ -186,9 +236,6 @@ class GameActivity5x5 : AppCompatActivity() {
         const val NOUGHT = "O"
         const val CROSS = "X"
     }
-
-
-
 
 
 }
