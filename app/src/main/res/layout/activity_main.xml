@@ -7,42 +7,48 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv3x3"
-        android:layout_marginTop="10dp"
-        android:text="@string/play_game_on_3x3_board"
-        android:textSize="21sp"
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv4x4"
-        android:layout_marginTop="10dp"
-        android:text="@string/play_game_on_4x4_board"
-        android:textSize="21sp"
+        <RadioButton
+            android:id="@+id/game3x3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_game_on_3x3_board"
+            android:textSize="21sp" />
+
+        <RadioButton
+            android:id="@+id/game4x4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_game_on_4x4_board"
+            android:textSize="21sp" />
+
+        <RadioButton
+            android:id="@+id/game5x5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_game_on_5x5_board"
+            android:textSize="21sp" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="@string/start_game"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv3x3"
-        />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv5x5"
-        android:layout_marginTop="10dp"
-        android:text="@string/play_game_on_5x5_board"
-        android:textSize="21sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv4x4"
-        />
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
 
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
