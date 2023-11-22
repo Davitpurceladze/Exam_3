@@ -22,5 +22,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
         }
+
+        binding.tv4x4.setOnClickListener {
+            val intent = Intent(this, GameActivity4x4::class.java)
+            startActivity(intent)
+        }
     }
 }
